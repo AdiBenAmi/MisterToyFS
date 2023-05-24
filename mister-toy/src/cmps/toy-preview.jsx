@@ -9,6 +9,7 @@ export function ToyPreview({ toy }) {
     return <article className="toy-preview">
         <h4>{name}</h4>
         <h1>🎎</h1>
+        <h1>hello from front</h1>
         <p>Price: <span>${price}</span></p>
         <p className={classNameColor}>{isStock}</p>
         {/* {labels.length > 0 && <p>{labelsString}</p>} */}

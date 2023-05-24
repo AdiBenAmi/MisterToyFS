@@ -6,7 +6,7 @@ const cors = require('cors')
 
 const toyService = require('./services/toy.service')
 const labelService = require('./services/label.service')
-
+console.log('hello from back');
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.resolve(__dirname,'public')))
     } else {
