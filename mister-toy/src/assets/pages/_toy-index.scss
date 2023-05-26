@@ -1,0 +1,18 @@
+.operating-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0.8em;
+
+
+    background-color: $clr;
+    font-size: 1rem;
+
+
+    .add-toy-link{
+        text-decoration: none;
+        padding-block: 1em ;
+        padding-inline-start: 1em;
+        color: $clr2;
+    }
+}

@@ -48,10 +48,17 @@ export function ToyIndex() {
 
 
     return (
-        <section>
-            <main>
-                <h3>Toy app</h3>
-                <Link to={`/toy/edit`}>Add Toy</Link>
+        <section className=' main-index full'>
+            <main className='main-layout'>
+                <section className='operating-container full'>
+                    <Link className='add-toy-link' to={`/toy/edit`}>Click to add Toy</Link>
+                    <ToyFilter
+                    onClickInStock={() => setFilterIsInStock(true)}
+                    onSetFilter={onSetFilter} 
+                    filterBy={filterBy}
+                    />
+                </section>
+
                 {/* <button onClick={onAddToy}>Add new toy</button> */}
                 <ToyList 
                 toys={toys}
@@ -59,11 +66,6 @@ export function ToyIndex() {
                 onEditToy={(toy)=>navigate(`/toy/${toy._id}`)}                    
                 />
 
-                <ToyFilter 
-                onClickInStock={() => setFilterIsInStock(true)}
-                onSetFilter={onSetFilter} 
-                filterBy={filterBy}
-                />
                 {isLoading && <h4 className="loading-message">Loading...</h4>}
 
 

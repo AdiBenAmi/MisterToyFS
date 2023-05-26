@@ -10,16 +10,16 @@ import { ToyEdit } from './pages/toy-edit'
 import { ToyDetails } from './pages/toy-details'
 
 
-import './App.css';
-//we will replace the css here 
+import './assets/styles.scss'
+//replace the css here 
 
 export default function App() {
   return (
       <Provider store={store}>
           <Router>
-              <section className="main-layout app">
+              <section className="app main-layout ">
                   <AppHeader />
-                  <main>
+                  <main className='main-container main-layout full'>
                       <Routes>
                           <Route element={<HomePage />} path="/" />
                           {/* <Route element={<AboutUs />} path="/about" /> */}

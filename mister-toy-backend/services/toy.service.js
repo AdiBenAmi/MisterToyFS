@@ -48,6 +48,7 @@ function save(toy) {
         toyToUpdate.price = toy.price
         toyToUpdate.inStock = toy.inStock
         toyToUpdate.labels = [...toy.labels]
+        toyToUpdate.imgUrl=toy.imgUrl
     } else {
         toy._id = _makeId()
         toys.push(toy)

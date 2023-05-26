@@ -33,13 +33,13 @@ export function ToyFilter({ onSetFilter, filterBy, onClickInStock }) {
     }
 
     return (
-        <section className="todo-filter">
-            <form onSubmit={onSubmitFilter}>
-                <label htmlFor="name">name: </label>
-                <input type="text"
+        <section className="toy-filter">
+            <form className="search-input-form" onSubmit={onSubmitFilter}>
+                <label htmlFor="name"></label>
+                <input className="search-input-field" type="text"
                 id="name"
                 name="name"
-                placeholder="Search toy By name"
+                placeholder="Search by name"
                 value={filterByToEdit.txt}
                 onChange={handleChange}
                 ref={elInputRef}

@@ -1,0 +1,21 @@
+.toy-filter {
+    padding-inline-end: 1em;
+
+    .search-input-field {
+        font-size: 1rem;
+        color: black;
+        line-height: 1em;
+        padding-block: 4px;
+        padding-inline-start: 1em;
+        border-radius: 0.5em;
+        border: solid lightgrey;
+        border-width: 1px 1px 1px 1px;  
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        background-image: url("../img/magnifire-black.svg");
+        background-size: 22px;
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+}
+
+

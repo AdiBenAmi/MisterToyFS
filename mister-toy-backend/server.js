@@ -7,6 +7,7 @@ const cors = require('cors')
 const toyService = require('./services/toy.service')
 const labelService = require('./services/label.service')
 console.log('hello from back');
+
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.resolve(__dirname,'public')))
     } else {
@@ -51,14 +52,15 @@ if (process.env.NODE_ENV === 'production') {
 
     // Add
     app.post('/api/toy', (req, res) => {
-        const { name, inStock, price, labels } = req.body
+        const { name, inStock, price, labels, imgUrl } = req.body
 
         const toy = {
             name,
             price: +price,
-            inStock,
             labels,
-            createdAt: Date.now()
+            createdAt: Date.now(),
+            inStock,
+            imgUrl
         }
         toyService.save(toy)
             .then((savedToy) => {
@@ -75,13 +77,14 @@ if (process.env.NODE_ENV === 'production') {
     // Edit
     app.put('/api/toy', (req, res) => {
 
-        const { name, price, _id, inStock, labels, createdAt } = req.body
+        const { name, price, _id, inStock, labels, createdAt, imgUrl } = req.body
         const toy = {
             _id,
             name,
-            inStock,
             price: +price,
             labels: [...labels],
+            inStock,
+            imgUrl: imgUrl
         }
         toyService.save(toy)
             .then((savedToy) => {
