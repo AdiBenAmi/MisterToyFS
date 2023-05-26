@@ -1,4 +1,3 @@
-// import logo from '../assets/img/logo.png'
 import { useDispatch, useSelector } from "react-redux"
 import cover from '../assets/img/rainbow-cover.png'
 import coverPlain from '../assets/img/rainbow-cover-plain.svg'

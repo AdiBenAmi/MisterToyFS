@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import toyImg from "../assets/img/toy-logo.png"
+// import toyImg from "../assets/img/toy-logo.png"
 
 export function ToyPreview({ toy }) {
     const { name, price, inStock, labels, createdAt, imgUrl } = toy
-    const labelsString = labels.join(', ')
+    // const labelsString = labels.join(', ')
     const isStock = inStock ? 'In stock' : 'Out of stock'
     const classNameColor = inStock ? 'green' : 'red'
 

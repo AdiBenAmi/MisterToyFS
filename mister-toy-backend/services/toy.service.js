@@ -4,7 +4,7 @@ var toys = require('../data/toy.json')
 function query(filterBy = {}) {
     let toysToDisplay = toys
     const { name, labels, inStock, maxPrice} = filterBy
-    console.log(filterBy)
+    // console.log(filterBy)
 
     if (name) {
         const regExp = new RegExp(name, 'i')
@@ -15,8 +15,9 @@ function query(filterBy = {}) {
         // filter by labels
     }
 
-    if (inStock !== undefined) {
-        // filter by status (sold out / in stock)
+    if (inStock === 'true' || inStock === 'false') {
+        console.log('filterBy:', filterBy)
+        toysToDisplay = toysToDisplay.filter(toy => toy.inStock === JSON.parse(filterBy.inStock))
     }
 
     if (maxPrice !== undefined && maxPrice !== '') {
@@ -75,7 +76,7 @@ function _saveToysToFile() {
             if (err) {
                 return console.log(err);
             }
-            console.log('The file was saved!');
+            // console.log('The file was saved!');
             resolve()
         });
     })

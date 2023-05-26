@@ -8,8 +8,8 @@
       "Puzzle"
     ],
     "createdAt": 1631031801011,
-    "inStock": true, 
-    "imgUrl":"https://play-smart.co.il/Cat_489700_656.jpg"
+    "inStock": true,
+    "imgUrl": "https://play-smart.co.il/Cat_489700_656.jpg"
   },
   {
     "_id": "t102",
@@ -21,8 +21,8 @@
       "Education"
     ],
     "createdAt": 1631031801011,
-    "inStock": true,
-    "imgUrl":"https://i5.walmartimages.com/asr/deb02110-c232-42c4-8bca-1292c28bbb72.56d6788f5b8790a713c9277d96970c7c.jpeg"
+    "inStock": "false",
+    "imgUrl": "https://static.parenting.com/wp-content/uploads/2019/08/01142648/leap-frog-main.jpg"
   },
   {
     "_id": "t103",
@@ -34,20 +34,20 @@
     ],
     "createdAt": 1631031801011,
     "inStock": true,
-    "imgUrl":"https://static.smallable.com/931494-720x720q80/wooden-rainbow-12-pieces.jpg"
+    "imgUrl": "https://static.smallable.com/931494-720x720q80/wooden-rainbow-12-pieces.jpg"
   },
   {
     "_id": "t104",
     "name": "Wooden activity cube",
-    "price": 90,
+    "price": 60,
     "labels": [
       "Education",
       "Wooden",
       "Baby"
     ],
     "createdAt": 1631031801011,
-    "inStock": true,
-    "imgUrl":"https://static.smallable.com/1671805-720x720q80/.jpg"
+    "inStock": false,
+    "imgUrl": "https://static.smallable.com/1671805-720x720q80/.jpg"
   },
   {
     "_id": "t105",
@@ -60,13 +60,13 @@
     ],
     "createdAt": 1631031801011,
     "inStock": true,
-    "imgUrl":"https://static.smallable.com/1113202-thickbox/stacking-stones.jpg"
+    "imgUrl": "https://static.smallable.com/1113202-thickbox/stacking-stones.jpg"
   },
   {
     "name": "Doll house",
     "price": 255,
-    "inStock": true,
-    "imgUrl":"https://i.pinimg.com/564x/f9/12/aa/f912aa788a09e95703b6bc5ac39bee37.jpg",
+    "inStock": false,
+    "imgUrl": "https://i.pinimg.com/564x/f9/12/aa/f912aa788a09e95703b6bc5ac39bee37.jpg",
     "labels": [
       "Doll",
       "Wooden"
@@ -78,7 +78,7 @@
     "name": "Elefun",
     "price": 20,
     "inStock": true,
-    "imgUrl":"https://m.media-amazon.com/images/I/71okbMfKBmL._AC_SX679_.jpg",
+    "imgUrl": "https://m.media-amazon.com/images/I/71okbMfKBmL._AC_SX679_.jpg",
     "labels": [
       "Battery Powered",
       "Box game"
@@ -90,7 +90,7 @@
     "name": "My pal - violet",
     "price": 88,
     "inStock": true,
-    "imgUrl":"https://i.pinimg.com/564x/80/d3/a0/80d3a0ea9786abad9071d0d11694093a.jpg",
+    "imgUrl": "https://i.pinimg.com/564x/80/d3/a0/80d3a0ea9786abad9071d0d11694093a.jpg",
     "labels": [
       "Battery Powered",
       "Doll",
@@ -103,7 +103,7 @@
     "name": "Baby travel kit",
     "price": 88,
     "inStock": true,
-    "imgUrl":"https://www.travelingbaby.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/i/n/infant_toys_1_1_2.jpg",
+    "imgUrl": "https://www.travelingbaby.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/i/n/infant_toys_1_1_2.jpg",
     "labels": [
       "Baby",
       "Education"
@@ -115,7 +115,7 @@
     "name": "Soft Clay Diy",
     "price": 66,
     "inStock": true,
-    "imgUrl":"https://img.fruugo.com/product/3/34/313279343_max.jpg",
+    "imgUrl": "https://img.fruugo.com/product/3/34/313279343_max.jpg",
     "labels": [
       "Baby",
       "Art"
@@ -127,7 +127,7 @@
     "name": "Robot Toy Car",
     "price": 66,
     "inStock": true,
-    "imgUrl":"https://img.fruugo.com/product/1/34/185750341_max.jpg",
+    "imgUrl": "https://img.fruugo.com/product/1/34/185750341_max.jpg",
     "labels": [
       "Battery Powered",
       "On wheels"
@@ -139,12 +139,26 @@
     "name": "Sit&Stand Walker",
     "price": 55,
     "inStock": true,
-    "imgUrl":"https://assets.babycenter.com/ims/2021/06/VTech-Sit-to-Stand-Learning-Walker-amazon_4x3.jpg",
+    "imgUrl": "https://assets.babycenter.com/ims/2021/06/VTech-Sit-to-Stand-Learning-Walker-amazon_4x3.jpg",
     "labels": [
       "Battery Powered",
       "Baby"
     ],
     "createdAt": 1684925697786,
     "_id": "LyO8m"
+  },
+  {
+    "name": "Barbie",
+    "price": 20,
+    "labels": [
+      "D",
+      "o",
+      "l",
+      "l"
+    ],
+    "createdAt": 1685105486548,
+    "inStock": true,
+    "imgUrl": "https://i.guim.co.uk/img/media/280555a2d4f633dada2b705ceb4681b98b22863c/0_12_2000_1200/master/2000.jpg?width=620&quality=85&dpr=1&s=none",
+    "_id": "8aZJo"
   }
 ]

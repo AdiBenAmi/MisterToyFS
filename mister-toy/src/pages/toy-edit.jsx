@@ -1,10 +1,10 @@
-import {toyService} from '../services/toy.service'
+import { toyService } from '../services/toy.service'
 import { useEffect, useState } from "react"
 
 import { Link, useNavigate, useParams } from "react-router-dom"
 import { showErrorMsg, showSuccessMsg } from "../services/event-bus.service"
 
-export function ToyEdit () {
+export function ToyEdit() {
     const [toyToEdit, setToyToEdit] = useState(toyService.getEmptyToy())
     const navigate = useNavigate()
     const { toyId } = useParams()
@@ -25,9 +25,16 @@ export function ToyEdit () {
     }
 
     function handleChange({ target }) {
+        // console.log('target:', target)
+        // console.log('target:', target.value)
         let { value, type, name: field } = target
         value = type === 'number' ? +value : value
         setToyToEdit((prevToy) => ({ ...prevToy, [field]: value }))
+    }
+
+    function handleChangeInStock() {
+        setToyToEdit((prevToy) =>
+            ({ ...prevToy, inStock: !prevToy.inStock }))
     }
 
     function onSaveToy(ev) {
@@ -46,30 +53,53 @@ export function ToyEdit () {
 
     return (
         <section className="toy-edit">
-            <h2>{toyToEdit._id ? 'Edit this toy' : 'Add a new toy'}</h2>
+            <img src={toyToEdit.imgUrl} />
+            <div className='edit-content-container'>
+                <h2>{toyToEdit._id ? 'Edit toy information' : 'Add a new toy'}</h2>
+                <form onSubmit={onSaveToy}>
+                    <label htmlFor="name">Name : </label>
+                    <input type="text"
+                        name="name"
+                        id="name"
+                        placeholder="Enter toy name..."
+                        value={toyToEdit.name}
+                        onChange={handleChange}
+                    />
+                    <label htmlFor="price">Price : </label>
+                    <input type="number"
+                        name="price"
+                        id="price"
+                        placeholder="Enter price"
+                        value={toyToEdit.price}
+                        onChange={handleChange}
+                    />
+                    <label htmlFor="imgUrl">Image url : </label>
+                    <input type="text"
+                        name="imgUrl"
+                        id="imgUrl"
+                        placeholder="Enter image adress"
+                        value={toyToEdit.imgUrl}
+                        onChange={handleChange}
+                    />
+                    {/* here */}
+                    <label htmlFor="labels">Labels : </label>
+                    <input type="text" //?
+                        name="labels"
+                        id="labels"
+                        placeholder="Enter image adress"
+                        value={toyToEdit.labels}
+                        onChange={handleChange}
+                    />
 
-            <form onSubmit={onSaveToy}>
-                <label htmlFor="name">Name : </label>
-                <input type="text"
-                    name="name"
-                    id="name"
-                    placeholder="Enter toy name..."
-                    value={toyToEdit.name}
-                    onChange={handleChange}
-                />
-                <label htmlFor="price">Price : </label>
-                <input type="number"
-                    name="price"
-                    id="price"
-                    placeholder="Enter price"
-                    value={toyToEdit.price}
-                    onChange={handleChange}
-                />
-                <div>
-                    <button>{toyToEdit._id ? 'Save' : 'Add'}</button>
-                    <Link to="/toy">Cancel</Link>
-                </div>
-            </form>
+                    <label htmlFor="inStock">inStock : </label>
+                    <input type="checkbox" name="inStock" value={toyToEdit.inStock} onChange={handleChangeInStock} checked={toyToEdit.inStock} />
+
+                    <div>
+                        <button className="btn btn-save">{toyToEdit._id ? 'Save' : 'Add'}</button>
+                        <Link to="/toy">Cancel</Link>
+                    </div>
+                </form>
+            </div>
 
 
         </section>

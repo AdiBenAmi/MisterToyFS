@@ -1,0 +1,25 @@
+.toy-details {
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    gap: 1em;
+
+    img{
+        width: 100%;
+    }
+
+    .text-details-container{
+        h1{
+            font-size: 1.5rem;
+            margin-block-end: 0.5em;
+        }
+
+        h5{
+            margin-block-start: 0;
+            padding-top: 0;
+        }
+
+        p{
+            font-size: 1.2rem;
+        }   
+    }
+}

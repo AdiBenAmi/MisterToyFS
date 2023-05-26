@@ -19,17 +19,6 @@ export const toyService = {
 function query(filterBy={}) {
     // return storageService.query(STORAGE_KEY)
     return httpService.get(BASE_URL, filterBy)
-            .then(toys => {
-                if (filterBy.name) {
-                    const regExp = new RegExp(filterBy.name, 'i')
-                    toys = toys.filter(toy => regExp.test(toy.name))
-                }
-
-                // if (filterBy.inStock !== undefined) {
-                //     toys= toys.filter(toy => toy.inStock === filterBy.inStock)
-                // }
-                return toys
-            })
 }
 
 function getById(toyId) {

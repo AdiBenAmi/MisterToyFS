@@ -1,15 +1,15 @@
 .app-header {
     grid-template-columns: 1fr;
+    background-color: whitesmoke;
 
     .nav-items-container{
-        grid-area: 1;
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
 
     .toy-logo{
-        height: 10em;
+        height: 8em;
     }
 
     .main-nav a{
