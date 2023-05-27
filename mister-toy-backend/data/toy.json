@@ -151,10 +151,7 @@
     "name": "Barbie",
     "price": 20,
     "labels": [
-      "D",
-      "o",
-      "l",
-      "l"
+      "Doll"
     ],
     "createdAt": 1685105486548,
     "inStock": true,

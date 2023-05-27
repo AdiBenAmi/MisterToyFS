@@ -1,11 +1,11 @@
 import {toyService} from '../services/toy.service'
 import { store } from './store.js'
-import { ADD_TOY, REMOVE_TOY, SET_TOYS, SET_IS_LOADING, UPDATE_TOY, SET_FILTERBY, SET_FILTERBY_SEARCH} from './toy.reducer'
+import { ADD_TOY, REMOVE_TOY, SET_TOYS, SET_IS_LOADING, UPDATE_TOY, SET_FILTERBY, SET_FILTERBY_SEARCH, SET_LABELS} from './toy.reducer'
 
 
-export function loadToys(filterBy) {
+export function loadToys(filterBy, sortBy) {
     store.dispatch({ type: SET_IS_LOADING, isLoading: true })
-    return toyService.query(filterBy)
+    return toyService.query(filterBy, sortBy)
         .then((toys) => {
             store.dispatch({ type: SET_TOYS, toys })
         })
@@ -17,6 +17,7 @@ export function loadToys(filterBy) {
             store.dispatch({ type: SET_IS_LOADING, isLoading: false })
         })
 }
+
 
 export function removeToy(toyId) {
     return toyService.remove(toyId)

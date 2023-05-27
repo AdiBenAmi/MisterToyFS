@@ -5,7 +5,6 @@ import { httpService } from './http.service.js'
 const STORAGE_KEY = 'toyDB'
 const BASE_URL = 'toy/'
 
-
 export const toyService = {
     query,
     getById,
@@ -13,12 +12,13 @@ export const toyService = {
     remove,
     getEmptyToy,
     getDefaultFilter,
-    // getActiveTodosCount
+    getLabels,
+    getDefaultSortBy
 }
 
-function query(filterBy={}) {
+function query(filterBy={}, sortBy={}) {
     // return storageService.query(STORAGE_KEY)
-    return httpService.get(BASE_URL, filterBy)
+    return httpService.get(BASE_URL, {filterBy, sortBy} )
 }
 
 function getById(toyId) {
@@ -26,6 +26,7 @@ function getById(toyId) {
     return httpService.get(BASE_URL + toyId)
 
 }
+
 function remove(toyId) {
     // return storageService.remove(STORAGE_KEY, toyId)
     return httpService.delete(BASE_URL + toyId)
@@ -44,7 +45,12 @@ function save(toy) {
 }
 
 function getDefaultFilter() {
-    return { name:'', inStock: undefined, labels:[], sortBy: [], maxPrice:'' }
+    return { name:'', inStock: undefined, labels:[], sortBy: {}, maxPrice:'' }
+}
+
+function getDefaultSortBy() {
+    // console.log('getDefaultSortBy:')
+    return { type: 'name' }
 }
 
 function getEmptyToy() {
@@ -56,6 +62,10 @@ function getEmptyToy() {
         inStock: true,
         imgUrl: ''
     }
+}
+
+function getLabels(){
+    return ['On wheels', 'Box game', 'Art', 'Baby', 'Doll', 'Puzzle', 'Outdoor', 'Battery Powered', 'Education', 'Wooden' ]
 }
 
 //DEMO DATA

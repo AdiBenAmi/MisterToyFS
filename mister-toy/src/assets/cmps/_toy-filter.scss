@@ -1,5 +1,11 @@
 .toy-filter {
     padding-inline-end: 1em;
+    display: flex;
+
+    // justify-content: center;
+    // align-items: center;
+    // margin-inline: rem(15px);
+    // padding: rem(10px);
 
     .search-input-field {
         font-size: 1rem;

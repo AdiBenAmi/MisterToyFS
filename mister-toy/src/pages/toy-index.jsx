@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
@@ -9,14 +9,14 @@ import { loadToys, removeToy, saveToy, setFilterBy } from '../store/toy.action'
 import { showErrorMsg, showSuccessMsg } from "../services/event-bus.service"
 
 export function ToyIndex() {
-    // const dispatch = useDispatch()
     const navigate = useNavigate()
     const {toys, filterBy} = useSelector((storeState) => storeState.toyModule)
     const isLoading = useSelector((storeState) => storeState.toyModule.isLoading)
+    const [sortBy, setSortBy] = useState(toyService.getDefaultSortBy())
 
     useEffect(() => {
-        loadToys(filterBy)
-    }, [filterBy])
+        loadToys(filterBy, sortBy)
+    }, [filterBy, sortBy])
 
     function onRemoveToy(toyId) {
         removeToy(toyId)
@@ -32,20 +32,13 @@ export function ToyIndex() {
         setFilterBy({ ...filterBy, inStock: value })
     }
 
-    // function onFilterBySearch({ target }) {
-    //     const field = target.name
-    //     console.log('field:', field)
-    //     const value = target.type === 'number' ? (+target.value || '') : target.value
-    //     console.log('value:', value)
-    //     setFilterBySearch({ ...filterBy, [field]: value })
-    // }
-
-    
-    function onSetFilter(filterBy) {
-        // console.log('FilterBy', filterBy)
-        setFilterBy(filterBy)
+    function onSetSortBy(sortBy) {
+        setSortBy(sortBy)
     }
 
+    function onSetFilter(filterBy) {
+        setFilterBy(filterBy)
+    }
 
     return (
         <section className=' main-index full'>
@@ -56,6 +49,7 @@ export function ToyIndex() {
                     onClickInStock={() => setFilterIsInStock(true)}
                     onSetFilter={onSetFilter} 
                     filterBy={filterBy}
+                    onSetSortBy={onSetSortBy}
                     />
                 </section>
 

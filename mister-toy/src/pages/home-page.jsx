@@ -4,7 +4,7 @@ import coverPlain from '../assets/img/rainbow-cover-plain.svg'
 
 export function HomePage() {
 
-    const count = useSelector((storeState) => storeState.userModule.count)
+    // const count = useSelector((storeState) => storeState.userModule.count)
 
     // const imgUrl = "logo.png"
     return (

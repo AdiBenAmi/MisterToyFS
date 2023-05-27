@@ -1,23 +1,24 @@
 .app-header {
     grid-template-columns: 1fr;
-    background-color: whitesmoke;
 
     .nav-items-container{
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        .toy-logo{
+            height: 7em;
+        }
+    
+        .main-nav{
+            color: $clr1;
+            padding-inline: 1em;
+            // text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;    
+            text-transform: uppercase;
+        }
     }
 
-    .toy-logo{
-        height: 8em;
-    }
-
-    .main-nav a{
-        color: $clr1;
-        padding-inline: 1em;
-        text-decoration: none;
-        font-size: 1.1rem;
-        font-weight: 600;    
-        text-transform: uppercase;
-    }
+   
 }

@@ -1,0 +1,12 @@
+.about{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    gap: 1em;
+
+    .about-content{
+        margin-block-start: 3em;
+        padding-inline-end: 4em ;
+        line-height: 1.8;
+    }
+
+}

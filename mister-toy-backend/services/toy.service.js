@@ -1,7 +1,7 @@
 const fs = require('fs')
 var toys = require('../data/toy.json')
 
-function query(filterBy = {}) {
+function query(filterBy = {}, sortBy={}) {
     let toysToDisplay = toys
     const { name, labels, inStock, maxPrice} = filterBy
     // console.log(filterBy)
@@ -11,8 +11,9 @@ function query(filterBy = {}) {
         toysToDisplay = toys.filter(toy => regExp.test(toy.name))
     }
 
-    if (labels && labels.length) {
-        // filter by labels
+    if (labels && labels.length >0) {
+        const labels = Array.isArray(filterBy.labels) ? filterBy.labels : filterBy.labels.split(',')
+        toysToDisplay = toysToDisplay.filter(toy => labels.every(l => toy.labels.includes(l)))
     }
 
     if (inStock === 'true' || inStock === 'false') {
@@ -24,7 +25,24 @@ function query(filterBy = {}) {
         toysToDisplay = toysToDisplay.filter(toy => toy.price <= maxPrice)
     }
 
+    toysToDisplay = _getSortedToys(toysToDisplay, sortBy)
+
     return Promise.resolve(toysToDisplay)
+}
+
+function _getSortedToys(toysToDisplay, sortBy) {
+    // console.log('sortBy:', sortBy)
+    sortBy.desc = -1
+    if (sortBy.type === 'name') {
+        console.log('sorting by name')
+        toysToDisplay.sort((t1, t2) => {
+            if (t1.name < t2.name) return -1
+            if (t1.name >= t2.name) return 1
+        })
+    } else {
+        toysToDisplay.sort((b1, b2) => (sortBy.desc) * (b2[sortBy.type] - b1[sortBy.type]))
+    }
+    return toysToDisplay
 }
 
 function get(toyId) {

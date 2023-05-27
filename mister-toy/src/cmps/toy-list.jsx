@@ -17,9 +17,7 @@ export function ToyList({toys, onRemoveToy, onEditToy}){
                     <button className="btn-delete-toy" onClick={() => { onRemoveToy(toy._id) }}> | Delete</button>
                 </div>
 
-                {/* <button className="buy" onClick={() => { addToCart(toy) }}>
-                    Add to Cart
-                </button> */}
+           
             </li>)}
         </ul>
 

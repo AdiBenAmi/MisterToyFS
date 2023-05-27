@@ -38,9 +38,8 @@ if (process.env.NODE_ENV === 'production') {
 
     // List
     app.get('/api/toy', (req, res) => {
-        // TODO: get sortBy too
-        const filterBy = req.query
-        toyService.query(filterBy)
+        const {filterBy, sortBy} = req.query
+        toyService.query(filterBy,sortBy)
             .then(toys => {
                 res.send(toys)
             })

@@ -6,6 +6,7 @@ export const ADD_TOY = 'ADD_TOY'
 export const UPDATE_TOY = 'UPDATE_TOY'
 
 export const SET_IS_LOADING = 'SET_IS_LOADING'
+export const SET_LABELS = 'SET_LABELS'
 
 export const SET_FILTERBY = 'SET_FILTERBY'
 export const SET_FILTERBY_SEARCH = 'SET_FILTERBY_SEARCH'
@@ -20,7 +21,7 @@ const initialState = {
 export function toyReducer(state = initialState, action) {
     // console.log('action', action)
     let toys
-    // let shoppingCart
+    let labels
     let filterBy
 
 
@@ -30,6 +31,8 @@ export function toyReducer(state = initialState, action) {
             return { ...state, isLoading: action.isLoading }        
         case SET_TOYS:
             return { ...state, toys: action.toys }
+        case SET_LABELS:
+            return { ...state, labels: action.labels }    
         case REMOVE_TOY:
             toys = state.toys.filter(t => t._id !== action.toyId)
             return { ...state, toys }
