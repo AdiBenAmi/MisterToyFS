@@ -10,8 +10,8 @@ $clr5: #fff;
 $layoutPadding: 20px;
 
 // LAYOUT BREAKPOINTS
-$break-narrow: 1200px;
-$break-normal: 1360px;
+$break-narrow: 600px;
+$break-normal: 740px;
 $break-wide: 1920px;
 
 $padded-break-narrow: $break-narrow + $layoutPadding * 2;
