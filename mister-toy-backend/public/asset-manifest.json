@@ -1,15 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.abd64e84.css",
-    "main.js": "/static/js/main.c42a33e3.js",
+    "main.css": "/static/css/main.d06014b0.css",
+    "main.js": "/static/js/main.b6790c3f.js",
     "static/js/787.95f1c328.chunk.js": "/static/js/787.95f1c328.chunk.js",
+    "static/media/rainbow-cover-plain.svg": "/static/media/rainbow-cover-plain.83fea73b7e7036af1f73a05d76ad4742.svg",
+    "static/media/rainbow-cover.png": "/static/media/rainbow-cover.7c087405a14a6218a2ca.png",
+    "static/media/VarelaRound-Regular.ttf": "/static/media/VarelaRound-Regular.e5bd09202b6c1ec4ec3b.ttf",
+    "static/media/Lato-Regular.ttf": "/static/media/Lato-Regular.633ffe4a4b5b7277cc35.ttf",
+    "static/media/Lato-Thin.ttf": "/static/media/Lato-Thin.e3fd43ffc95c0be1ed18.ttf",
+    "static/media/toy-logo.png": "/static/media/toy-logo.c08de931d2a62c4faf32.png",
     "index.html": "/index.html",
-    "main.abd64e84.css.map": "/static/css/main.abd64e84.css.map",
-    "main.c42a33e3.js.map": "/static/js/main.c42a33e3.js.map",
+    "static/media/magnifire-black.svg": "/static/media/magnifire-black.2a3b2d10f1c1a518faaa.svg",
+    "main.d06014b0.css.map": "/static/css/main.d06014b0.css.map",
+    "main.b6790c3f.js.map": "/static/js/main.b6790c3f.js.map",
     "787.95f1c328.chunk.js.map": "/static/js/787.95f1c328.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.abd64e84.css",
-    "static/js/main.c42a33e3.js"
+    "static/css/main.d06014b0.css",
+    "static/js/main.b6790c3f.js"
   ]
 }
